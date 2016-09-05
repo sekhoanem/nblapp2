@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NBL App</title>
+<!-- jQM Required files -->
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+<script src="jquery.js"></script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+
+ <!-- Core CSS File. The CSS code needed to make eventCalendar works -->
+	<link rel="stylesheet" href="css/eventCalendar.css">
+
+	<!-- Theme CSS file: it makes eventCalendar nicer -->
+	<link rel="stylesheet" href="css/eventCalendar_theme_responsive.css">
+
+	<!--<script src="js/jquery.js" type="text/javascript"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+
+   <script type="text/javascript" src="cordova.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div data-role="page" id="home">
+    <div data-role="panel" id="panel1" data-display="overlay" data-direction="left" >
+    <div id="logo" align="center"><img src="images/lbaicon.png"></div>
+    <h2>NBL 2016/17 Season</h2>
+    <ul data-role="listview">
+            <li data-icon="plus"><a href="#">Scores</a></li>
+            <li data-icon="bullets"><a href="#">Standings</a></li>
+            <li data-icon="info"><a href="#">LBA News</a></li>
+            
+            <div align="center"><a href="#home" data-rel="close">Close panel</a></div>
+            </li>
+            </ul>
+           
+  </div>
+	<div data-role="header">
+        <a href="#panel1" class="ui-btn ui-btn-inline" data-icon="bars-black"></a>
+		<h6>League Calendar</h6>
+	</div>
+    <div data-role="content" >
+    
+    <div class="g6">
+				
+				
+				<div id="eventCalendarHumanDate"></div>
+				<script>
+					$(document).ready(function() {
+						$("#eventCalendarHumanDate").eventCalendar({
+							eventsjson: 'http://localhost/eventCalendar/json/events.json.php',
+							jsonDateFormat: 'human'  // 'YYYY-MM-DD HH:MM:SS'
+						});
+					});
+				</script>
+
+			</div>
+		</div>
+    
+    
+    </div>    
+    <button onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
+
+  <div data-role="footer">
+		<h6>NBL App Ver. 1.0.0.1</h6>
+  </div>
+          
+</div>
+ 
+
+
+
+
+
+</body>
+
+<script src="js/jquery.eventCalendar.js" type="text/javascript"></script>
+</html>

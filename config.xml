@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.bdau"
+    versionCode = "10" 
+    version     = "1.0.1" >
+
+<!-- versionCode is optional and Android only -->
+
+<name>NBL 2016/17 </name>
+
+<description>
+    App for the National Basketball League 
+</description>
+
+<author href="#" email="sekhoanem@gmail1.com">
+    Sekhoane Moshabesha
+</author>
+
+     <gap:plugin name="nl.x-services.plugins.socialsharing" />
+
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+    <icon src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+    <icon src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+    <icon src="xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
+    </widget>
+	
+	
